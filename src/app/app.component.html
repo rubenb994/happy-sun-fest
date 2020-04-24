@@ -31,12 +31,22 @@
         </div>
       </div> -->
       <div class="row">
-        <div class="col-3 room-col" *ngFor="let room of rooms">
-          <button mat-raised-button color="warn" (click)="onClickJoinHangout(room)">
-            <mat-icon>duo</mat-icon>
-            {{room.owner}}s Room
-          </button>
+        <div class="col-3">
+          <div class="row">
+            <div class="col-12 room-col=" *ngFor="let room of rooms">
+              <button class="room-button" mat-raised-button color="warn" (click)="onClickJoinHangout(room)"
+                [style.backgroundColor]="generateColorStyle(room)">
+                <mat-icon>duo</mat-icon>
+                {{room.owner}}s Room
+              </button>
+            </div>
+          </div>
         </div>
+        <div class="col-9">
+          <p>Hello</p>
+        </div>
+
+
       </div>
 
     </div>
