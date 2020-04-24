@@ -1,13 +1,46 @@
-<div class="container button-container">
-  <div class="row">
+<div class="mat-app-background">
+  <section class="mat-typography app-content">
 
-    <div class="col-12">
-      <p>You are currently in {{currentLocation}}</p>
+    <mat-toolbar color="primary">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            Happy sun fest
+          </div>
+        </div>
+      </div>
+    </mat-toolbar>
+
+    <div class="container app-container">
+      <!-- <div class="row">
+        <div class="col-12">
+          <p>You are currently in {{currentLocation}}</p>
+        </div>
+
+        <div class="col-auto">
+          <button mat-raised-button color="warn" (click)="onClickJoinHangout1()">
+            <mat-icon>duo</mat-icon>
+            Join Ruben
+          </button>
+        </div>
+        <div class="col-auto">
+          <button mat-raised-button color="warn" (click)="onClickJoinHangout2()">
+            <mat-icon>duo</mat-icon>
+            Join Ilse
+          </button>
+        </div>
+      </div> -->
+      <div class="row">
+        <div class="col-3 room-col" *ngFor="let room of rooms">
+          <button mat-raised-button color="warn" (click)="onClickJoinHangout(room)">
+            <mat-icon>duo</mat-icon>
+            {{room.owner}}s Room
+          </button>
+        </div>
+      </div>
+
     </div>
-    <div class="col-6">
-      <button (click)="onClickJoinHangout1()">Join hangout 1</button>
-    </div>
-    <div class="col-6">
-      <button (click)="onClickJoinHangout2()">Join hangout 2</button>
-    </div>
-  </div>
+
+
+  </section>
+</div>

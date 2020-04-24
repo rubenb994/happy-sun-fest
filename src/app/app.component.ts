@@ -6,7 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'house-party-demo';
+
+  public rooms = [
+    { owner: 'Putain', hangoutLink: '', windowRef: null },
+    { owner: 'Isle', hangoutLink: '', windowRef: null },
+    { owner: 'Arturo', hangoutLink: '', windowRef: null },
+    { owner: 'Bert', hangoutLink: '', windowRef: null },
+    { owner: 'Nate my Mate', hangoutLink: '', windowRef: null },
+    { owner: 'Paultje Pils', hangoutLink: '', windowRef: null },
+    { owner: 'Babush', hangoutLink: '', windowRef: null },
+    { owner: 'Toni', hangoutLink: '', windowRef: null },
+    { owner: 'Soppie', hangoutLink: '', windowRef: null },
+    { owner: 'Anorld', hangoutLink: '', windowRef: null },
+  ];
 
   private hangoutLink1 = 'https://hangouts.google.com/call/qffcxSsCX7o55tnNimFtAEEI';
   private hangoutLink2 = 'https://hangouts.google.com/call/DTrANIf3KX0e0coBbkq-AEEI';
@@ -15,6 +27,10 @@ export class AppComponent {
   private tabRef2: Window;
 
   public currentLocation = 'nowhere';
+
+  public onClickJoinHangout(room): void {
+
+  }
 
   public onClickJoinHangout1(): void {
     this.tabRef1 = window.open(this.hangoutLink1);
