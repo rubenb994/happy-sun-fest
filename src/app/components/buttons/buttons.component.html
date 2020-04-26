@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-12 room-col=" *ngFor="let room of rooms">
+        <button class="room-button" mat-raised-button color="warn" (click)="onClickJoinHangout(room)"
+            [style.backgroundColor]="generateColorStyle(room)">
+            <mat-icon>duo</mat-icon>
+            {{room.owner}}s Room
+        </button>
+    </div>
+</div>
+<div class="row">
+    <!-- <div class="col-12">
+        <p>You are currently in {{currentLocation}}</p>
+    </div>
+
+    <div class="col-auto">
+        <button mat-raised-button color="warn" (click)="onClickJoinHangout1()">
+            <mat-icon>duo</mat-icon>
+            Join Ruben
+        </button>
+    </div>
+    <div class="col-auto">
+        <button mat-raised-button color="warn" (click)="onClickJoinHangout2()">
+            <mat-icon>duo</mat-icon>
+            Join Ilse
+        </button>
+    </div> -->
+</div>
